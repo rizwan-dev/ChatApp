@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "928398936293",
+    "firebase_url": "https://build-test-6d1db.firebaseio.com",
+    "project_id": "build-test-6d1db",
+    "storage_bucket": "build-test-6d1db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928398936293:android:5b74754c46d50490",
+        "android_client_info": {
+          "package_name": "com.felixit.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928398936293-3as3lo3794hv9be4iv2hbctt9ikg1pj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.felixit.chat",
+            "certificate_hash": "484a7e84cbad30332bdf396477f2e24e8cedfb66"
+          }
+        },
+        {
+          "client_id": "928398936293-6eovl7rd00robb72qqocf1e33rflhcib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV-NrsiAbxHEQkPtbWul5YYYmrZVhOHhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928398936293-6eovl7rd00robb72qqocf1e33rflhcib.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "928398936293-dtbukvdb6pkf7p10bibvjvs974iodm6k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.felixtechlabs.BuildTest"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
