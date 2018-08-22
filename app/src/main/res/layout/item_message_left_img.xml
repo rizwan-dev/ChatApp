@@ -1,65 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingTop="5dp"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingRight="16dp"
+    android:paddingTop="5dp">
 
     <ImageView
-        android:layout_alignBottom="@+id/contentMessageChat"
+        android:id="@+id/ivOtherUserChat"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:id="@+id/ivOtherUserChat" />
+        android:layout_alignBottom="@+id/contentMessageChat" />
 
     <me.himanshusoni.chatmessageview.ChatMessageView
         android:id="@+id/contentMessageChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cmv_backgroundColor="#fff"
-        app:cmv_backgroundColorPressed="#FFBABABA"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ivOtherUserChat"
         app:cmv_arrowGravity="end"
         app:cmv_arrowPosition="left"
+        app:cmv_backgroundColor="#fff"
+        app:cmv_backgroundColorPressed="#FFBABABA"
         app:cmv_cornerRadius="3dp"
-        app:cmv_showArrow="true"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/ivOtherUserChat">
+        app:cmv_showArrow="true">
 
-    <ImageView
-        android:id="@+id/img_chat"
-        android:minHeight="150dp"
-        android:background="#fff"
-        android:adjustViewBounds="true"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_chat"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="#fff"
+                android:minHeight="150dp" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/tvLocation"
-            android:layout_marginTop="2dp"
-            android:layout_below="@+id/img_chat"
-            android:textSize="10sp"
-            android:text="Localização Recebida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"/>
+            android:layout_below="@+id/img_chat"
+            android:layout_marginTop="2dp"
+            android:text="Localização Recebida"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
     </me.himanshusoni.chatmessageview.ChatMessageView>
 
     <TextView
-        android:text="22/06/2016"
         android:id="@+id/timestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/contentMessageChat"
         android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/ivUserChat"
         android:paddingLeft="10dp"
         android:paddingTop="3dp"
-        android:textSize="10sp"
-        android:layout_below="@+id/contentMessageChat"
-        android:layout_toEndOf="@+id/ivUserChat" />
+        android:text="22/06/2016"
+        android:textSize="10sp" />
 </RelativeLayout>
