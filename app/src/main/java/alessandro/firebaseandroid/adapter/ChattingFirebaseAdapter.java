@@ -92,15 +92,16 @@ public class ChattingFirebaseAdapter extends FirebaseRecyclerAdapter<ChatData, C
         viewHolder.tvIsLocation(View.GONE);
         if (model.getType().equals(MEDIA)) {
             viewHolder.tvIsLocation(View.GONE);
-            if(TextUtils.isEmpty(model.getMediaUrl())){
-            if (model.getLocalMediaURL() != null) {
-                viewHolder.setIvLocalChatPhoto(model.getLocalMediaURL());
-                viewHolder.progress.setVisibility(View.VISIBLE);
-            }
-            }
-            else{
+            if (TextUtils.isEmpty(model.getMediaUrl())) {
+                if (model.getLocalMediaURL() != null) {
+                    viewHolder.setIvLocalChatPhoto(model.getLocalMediaURL());
+                    if (viewHolder.progress != null)
+                        viewHolder.progress.setVisibility(View.VISIBLE);
+                }
+            } else {
                 viewHolder.setIvChatPhoto(model.getMediaUrl());
-                viewHolder.progress.setVisibility(View.GONE);
+                if (viewHolder.progress != null)
+                    viewHolder.progress.setVisibility(View.GONE);
             }
 
         }
